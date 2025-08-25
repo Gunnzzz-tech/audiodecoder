@@ -77,7 +77,7 @@ class _MainScaffoldState extends State<MainScaffold>
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/backg.jpg"),
+            image: AssetImage("assets/blue.jpeg"),
             fit: BoxFit.cover,
           ),
         ),

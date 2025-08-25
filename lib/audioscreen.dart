@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AudioScreen extends StatefulWidget {
   final String audioPath; // can be local path or network URL
@@ -64,7 +65,7 @@ class _AudioScreenState extends State<AudioScreen> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/backg.jpg"),
+          image: AssetImage("assets/image.jpg"),
           fit: BoxFit.cover,
         ),
       ),
@@ -73,6 +74,18 @@ class _AudioScreenState extends State<AudioScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Heading
+            Text(
+              "Audio Player",
+              style: GoogleFonts.montserrat(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 30),
+
+            // Slider
             Slider(
               min: 0,
               max: duration.inSeconds.toDouble(),
@@ -84,16 +97,25 @@ class _AudioScreenState extends State<AudioScreen> {
                 await _audioPlayer.seek(newPosition);
               },
             ),
+
+            // Duration row
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(_formatDuration(position),
-                    style: const TextStyle(color: Colors.white)),
-                Text(_formatDuration(duration),
-                    style: const TextStyle(color: Colors.white)),
+                Text(
+                  _formatDuration(position),
+                  style: const TextStyle(color: Colors.white),
+                ),
+                Text(
+                  _formatDuration(duration),
+                  style: const TextStyle(color: Colors.white),
+                ),
               ],
             ),
+
             const SizedBox(height: 40),
+
+            // Controls
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

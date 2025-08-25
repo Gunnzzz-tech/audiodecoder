@@ -147,8 +147,18 @@ class _MessageScreenState extends State<MessageScreen> {
             if (!startedDecoding)
               ElevatedButton(
                 onPressed: isDecoding ? null : decode,
-                child: Text(isDecoding ? "Decoding..." : "Decode"),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey[700], // grey background
+                  foregroundColor: Colors.white,     // text (and icon) color
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10), // 20 radius corners
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+                child: Text(isDecoding ? "Decoding..." : "Decode Audio"),
               ),
+
+
             const SizedBox(height: 12),
 
             // Logs panel
