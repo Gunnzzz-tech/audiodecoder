@@ -1,4 +1,4 @@
-<img width="1193" height="766" alt="Screenshot 2025-08-25 at 11 18 56 PM" src="https://github.com/user-attachments/assets/235ed7c5-ebff-4af7-bcec-3acdf9c6ea78" /># 🎶 AudioDecoder
+AudioDecoder
 
 A Flutter project that decodes a **hidden message** embedded inside an audio file (`hidden_message.wav`) using **frequency analysis**.  
 
@@ -22,6 +22,42 @@ Your task is to **decode the hidden message** and display it inside the Flutter 
 <img width="1197" height="765" alt="Screenshot 2025-08-25 at 11 19 48 PM" src="https://github.com/user-attachments/assets/a5d07c4c-42e6-4848-89fb-7a0d21de42b5" />
 <img width="1193" height="766" alt="Screenshot 2025-08-25 at 11 18 56 PM" src="https://github.com/user-attachments/assets/b89b870d-e5b6-4d62-9b02-17c758e4d78f" />
 
+1️⃣ Audio Player Screen (AudioScreen)
+
+Purpose: Provides audio playback controls so the user can listen to hidden_message.wav.
+
+Features:
+
+Background image (blue.jpeg) for styled UI.
+
+Heading text: "Audio Player" (Montserrat Google Font).
+
+Audio controls:
+
+Play/Pause
+
+Stop
+
+Seek slider to move forward/backward.
+
+Time indicators (current position & total duration).
+
+📝 2. Message Screen (MessageScreen)
+
+Purpose: Allows users to decode the hidden text message from the audio file.
+
+Features:
+
+Decode button (grey, rounded rectangle with radius 20).
+
+Logs panel: Shows step-by-step decoding like:
+Window peak freq: 440 Hz -> nearest 440 Hz -> 'A'
+
+Decoded message display: Shows the final reconstructed text at the bottom.
+
+Spectrum Visualization: A real-time line chart (fl_chart) showing FFT spectrum values.
+
+Layered background image (backg.jpg) with semi-transparent log panels for readability.
 
 ## 📝 Frequency Mapping Dictionary
 
